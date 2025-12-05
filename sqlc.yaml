@@ -1,0 +1,57 @@
+version: "1"
+packages:
+  - name: "db_users"
+    path: "backend/internal/db/users"
+    engine: "postgresql"
+    schema: "sqlc/schema/001_orgs_users.sql"
+    queries: "sqlc/queries/users.sql"
+    emit_json_tags: true
+    emit_prepared_queries: true
+    emit_interface: true
+
+  - name: "db_workflows"
+    path: "backend/internal/db/workflows"
+    engine: "postgresql"
+    schema: "sqlc/schema/002_workflows.sql"
+    queries: "sqlc/queries/workflows.sql"
+    emit_json_tags: true
+    emit_prepared_queries: true
+    emit_interface: true
+
+  - name: "db_executions"
+    path: "backend/internal/db/executions"
+    engine: "postgresql"
+    schema: "sqlc/schema/003_executions.sql"
+    queries: "sqlc/queries/executions.sql"
+    emit_json_tags: true
+    emit_prepared_queries: true
+    emit_interface: true
+
+  - name: "db_integrations"
+    path: "backend/internal/db/integrations"
+    engine: "postgresql"
+    schema: "sqlc/schema/004_integrations.sql"
+    queries: "sqlc/queries/integrations.sql"
+    emit_json_tags: true
+    emit_prepared_queries: true
+    emit_interface: true
+
+  - name: "db_ai_requests"
+    path: "backend/internal/db/ai_requests"
+    engine: "postgresql"
+    schema: "sqlc/schema/005_ai_requests.sql"
+    queries: "sqlc/queries/ai_requests.sql"
+    emit_json_tags: true
+    emit_prepared_queries: true
+    emit_interface: true
+
+  - name: "db_credits"
+    path: "backend/internal/db/credits"
+    engine: "postgresql"
+    schema: "sqlc/schema/006_credits.sql"
+    queries: "sqlc/queries/credits.sql"
+    emit_json_tags: true
+    emit_prepared_queries: true
+    emit_interface: true
+
+overrides: []
